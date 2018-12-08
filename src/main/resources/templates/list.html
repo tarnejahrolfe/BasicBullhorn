@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/add">New Message</a>
+<br /> <br />
+<table>
+    <tr>
+        <th>Content</th>
+        <th>Sent by</th>
+        <th>Date</th>
+    </tr>
+    <tr th:each="message : ${messages}">
+        <td th:text="${message.content}"></td>
+        <td th:text="${message.posteddate}"></td>
+        <td th:text="${message.sentby}"></td>
+    </tr>
+</table>
+</body>
+</html>
